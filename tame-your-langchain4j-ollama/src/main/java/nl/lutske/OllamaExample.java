@@ -13,7 +13,7 @@ public class OllamaExample {
                 .build();
 
         // Ask it something!
-        String response = model.chat("Explain dependency injection in simple Java terms.");
+        String response = model.chat("Explain dependency injection in simple Java terms in only 2 sentences");
         System.out.println("🤖 " + response);
     }
 }

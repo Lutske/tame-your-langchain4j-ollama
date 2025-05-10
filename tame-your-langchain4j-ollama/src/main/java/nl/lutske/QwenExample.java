@@ -14,7 +14,9 @@ public class QwenExample {
                 .logResponses(true)
                 .build();
 
-        String question = "Summarize the concept of Java Streams in 2 sentences.";
+        // specialize
+
+        String question = "Tell me why you should use local LLM's in Java";
         String answer = model.chat(question);
         System.out.println("🤖 " + answer);
     }
