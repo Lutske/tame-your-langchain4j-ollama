@@ -39,7 +39,7 @@ public class StreamingExample {
 
             @Override
             public void onPartialResponse(String partialResponse) {
-                System.out.print(partialResponse); // stream naar console
+                System.out.print(partialResponse); // stream to console
             }
 
             @Override
@@ -65,24 +65,8 @@ public class StreamingExample {
             }
         });
 
-        // voorkom dat main eindigt voordat streaming klaar is
         if (!done.await(60, TimeUnit.SECONDS)) {
             System.err.println("Timed out waiting for streaming response.");
         }
     }
-//    
-//        ChatResponse response = model.chat(request);
-//
-//
-//        IO.println("\n" + response.aiMessage().text() + "\n");
-//
-//        TokenUsage usage = response.tokenUsage();
-//        if (usage != null) {
-//            IO.println("Prompt tokens: " + usage.inputTokenCount());
-//            IO.println("Completion tokens: " + usage.outputTokenCount());
-//            IO.println("Total tokens: " + usage.totalTokenCount());
-//        } else {
-//            IO.println("Token usage not available for this response/model.");
-//        }
-//    }
 }
